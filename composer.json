@@ -1,5 +1,5 @@
 {
-    "name": "aldinokemal/bbkkp-sdk-esign-service-php",
+    "name": "dolkode/bbkkp-sdk-esign-service-php",
     "description": "This API is used for sending whatsapp via API",
     "keywords": [
         "openapitools",

@@ -19,11 +19,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/aldinokemal/bbkkp-sdk-esign-service-php.git"
+      "url": "https://github.com/dolkode/bbkkp-sdk-esign-service-php.git"
     }
   ],
   "require": {
-    "aldinokemal/bbkkp-sdk-esign-service-php": "*@dev"
+    "dolkode/bbkkp-sdk-esign-service-php": "*@dev"
   }
 }
 ```
