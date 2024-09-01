@@ -75,7 +75,7 @@ try {
 ## `signDocument()`
 
 ```php
-signDocument($file, $nik, $passphrase, $ref_code, $ref_metadata): \OpenAPI\Client\Model\SignResponse
+signDocument($file, $nik, $passphrase, $ref_code, $file_name, $ref_metadata): \OpenAPI\Client\Model\SignResponse
 ```
 
 Add signature to a document
@@ -105,10 +105,11 @@ $file = "/path/to/file.txt"; // \SplFileObject
 $nik = 'nik_example'; // string
 $passphrase = 'passphrase_example'; // string
 $ref_code = 'ref_code_example'; // string | Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen
+$file_name = 'file_name_example'; // string
 $ref_metadata = 'ref_metadata_example'; // string | Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64
 
 try {
-    $result = $apiInstance->signDocument($file, $nik, $passphrase, $ref_code, $ref_metadata);
+    $result = $apiInstance->signDocument($file, $nik, $passphrase, $ref_code, $file_name, $ref_metadata);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EsignApi->signDocument: ', $e->getMessage(), PHP_EOL;
@@ -119,10 +120,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **file** | **\SplFileObject****\SplFileObject**|  | [optional] |
-| **nik** | **string**|  | [optional] |
-| **passphrase** | **string**|  | [optional] |
-| **ref_code** | **string**| Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen | [optional] |
+| **file** | **\SplFileObject****\SplFileObject**|  | |
+| **nik** | **string**|  | |
+| **passphrase** | **string**|  | |
+| **ref_code** | **string**| Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen | |
+| **file_name** | **string**|  | [optional] |
 | **ref_metadata** | **string**| Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64 | [optional] |
 
 ### Return type
@@ -185,7 +187,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **signed_file** | **\SplFileObject****\SplFileObject**|  | [optional] |
+| **signed_file** | **\SplFileObject****\SplFileObject**|  | |
 
 ### Return type
 
