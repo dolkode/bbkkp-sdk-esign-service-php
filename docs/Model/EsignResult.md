@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **ref_code** | **string** |  | [optional]
 **file_name** | **string** |  | [optional]
 **file_link** | **string** |  | [optional]
+**date_signed** | **string** |  | [optional]
 **esign_details** | [**\OpenAPI\Client\Model\EsignDetails**](EsignDetails.md) |  | [optional]
 **message** | **string** |  | [optional]
 
