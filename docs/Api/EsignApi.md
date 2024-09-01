@@ -4,16 +4,16 @@ All URIs are relative to http://localhost:10020, except if the operation defines
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**apiEsignNikNikGet()**](EsignApi.md#apiEsignNikNikGet) | **GET** /api/esign/nik/{nik} | Get user information |
-| [**apiEsignSignPost()**](EsignApi.md#apiEsignSignPost) | **POST** /api/esign/sign | Add signature to a document |
-| [**apiEsignVerifyDocPost()**](EsignApi.md#apiEsignVerifyDocPost) | **POST** /api/esign/verify/doc | Verify signature |
-| [**apiEsignVerifyIdGet()**](EsignApi.md#apiEsignVerifyIdGet) | **GET** /api/esign/verify/id | Verify signature |
+| [**getUserNik()**](EsignApi.md#getUserNik) | **GET** /api/esign/nik/{nik} | Get user information |
+| [**signDocument()**](EsignApi.md#signDocument) | **POST** /api/esign/sign | Add signature to a document |
+| [**verifyDocumentByDoc()**](EsignApi.md#verifyDocumentByDoc) | **POST** /api/esign/verify/doc | Verify signature |
+| [**verifyDocumentById()**](EsignApi.md#verifyDocumentById) | **GET** /api/esign/verify/id | Verify signature |
 
 
-## `apiEsignNikNikGet()`
+## `getUserNik()`
 
 ```php
-apiEsignNikNikGet($nik): \OpenAPI\Client\Model\ApiEsignNikNikGet200Response
+getUserNik($nik): \OpenAPI\Client\Model\GetUserNik200Response
 ```
 
 Get user information
@@ -42,10 +42,10 @@ $apiInstance = new OpenAPI\Client\Api\EsignApi(
 $nik = 'nik_example'; // string | NIK, Nomor Induk Kepegawaian
 
 try {
-    $result = $apiInstance->apiEsignNikNikGet($nik);
+    $result = $apiInstance->getUserNik($nik);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EsignApi->apiEsignNikNikGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EsignApi->getUserNik: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiEsignNikNikGet200Response**](../Model/ApiEsignNikNikGet200Response.md)
+[**\OpenAPI\Client\Model\GetUserNik200Response**](../Model/GetUserNik200Response.md)
 
 ### Authorization
 
@@ -72,10 +72,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiEsignSignPost()`
+## `signDocument()`
 
 ```php
-apiEsignSignPost($file, $nik, $passphrase, $ref_code, $ref_metadata): \OpenAPI\Client\Model\SignResponse
+signDocument($file, $nik, $passphrase, $ref_code, $ref_metadata): \OpenAPI\Client\Model\SignResponse
 ```
 
 Add signature to a document
@@ -108,10 +108,10 @@ $ref_code = 'ref_code_example'; // string | Reference code adalah nomor unik dis
 $ref_metadata = 'ref_metadata_example'; // string | Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64
 
 try {
-    $result = $apiInstance->apiEsignSignPost($file, $nik, $passphrase, $ref_code, $ref_metadata);
+    $result = $apiInstance->signDocument($file, $nik, $passphrase, $ref_code, $ref_metadata);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EsignApi->apiEsignSignPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EsignApi->signDocument: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -142,10 +142,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiEsignVerifyDocPost()`
+## `verifyDocumentByDoc()`
 
 ```php
-apiEsignVerifyDocPost($signed_file): \OpenAPI\Client\Model\EsignResult
+verifyDocumentByDoc($signed_file): \OpenAPI\Client\Model\EsignResult
 ```
 
 Verify signature
@@ -174,10 +174,10 @@ $apiInstance = new OpenAPI\Client\Api\EsignApi(
 $signed_file = "/path/to/file.txt"; // \SplFileObject
 
 try {
-    $result = $apiInstance->apiEsignVerifyDocPost($signed_file);
+    $result = $apiInstance->verifyDocumentByDoc($signed_file);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EsignApi->apiEsignVerifyDocPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EsignApi->verifyDocumentByDoc: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -204,10 +204,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiEsignVerifyIdGet()`
+## `verifyDocumentById()`
 
 ```php
-apiEsignVerifyIdGet($id): \OpenAPI\Client\Model\EsignResult
+verifyDocumentById($id): \OpenAPI\Client\Model\EsignResult
 ```
 
 Verify signature
@@ -236,10 +236,10 @@ $apiInstance = new OpenAPI\Client\Api\EsignApi(
 $id = 'id_example'; // string | Esign ID / Reference Code
 
 try {
-    $result = $apiInstance->apiEsignVerifyIdGet($id);
+    $result = $apiInstance->verifyDocumentById($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EsignApi->apiEsignVerifyIdGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EsignApi->verifyDocumentById: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

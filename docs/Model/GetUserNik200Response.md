@@ -1,4 +1,4 @@
-# # ApiEsignNikNikGet200Response
+# # GetUserNik200Response
 
 ## Properties
 
