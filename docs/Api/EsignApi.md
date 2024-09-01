@@ -145,7 +145,7 @@ try {
 ## `apiEsignVerifyDocPost()`
 
 ```php
-apiEsignVerifyDocPost($signed_file): \OpenAPI\Client\Model\ApiEsignVerifyDocPost200Response
+apiEsignVerifyDocPost($signed_file): \OpenAPI\Client\Model\EsignResult
 ```
 
 Verify signature
@@ -189,7 +189,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiEsignVerifyDocPost200Response**](../Model/ApiEsignVerifyDocPost200Response.md)
+[**\OpenAPI\Client\Model\EsignResult**](../Model/EsignResult.md)
 
 ### Authorization
 
