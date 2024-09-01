@@ -75,7 +75,7 @@ try {
 ## `apiEsignSignPost()`
 
 ```php
-apiEsignSignPost($file, $nik, $passphrase, $ref_code): \OpenAPI\Client\Model\SignResponse
+apiEsignSignPost($file, $nik, $passphrase, $ref_code, $ref_metadata): \OpenAPI\Client\Model\SignResponse
 ```
 
 Add signature to a document
@@ -105,9 +105,10 @@ $file = "/path/to/file.txt"; // \SplFileObject
 $nik = 'nik_example'; // string
 $passphrase = 'passphrase_example'; // string
 $ref_code = 'ref_code_example'; // string | Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen
+$ref_metadata = 'ref_metadata_example'; // string | Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64
 
 try {
-    $result = $apiInstance->apiEsignSignPost($file, $nik, $passphrase, $ref_code);
+    $result = $apiInstance->apiEsignSignPost($file, $nik, $passphrase, $ref_code, $ref_metadata);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EsignApi->apiEsignSignPost: ', $e->getMessage(), PHP_EOL;
@@ -122,6 +123,7 @@ try {
 | **nik** | **string**|  | [optional] |
 | **passphrase** | **string**|  | [optional] |
 | **ref_code** | **string**| Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen | [optional] |
+| **ref_metadata** | **string**| Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64 | [optional] |
 
 ### Return type
 
