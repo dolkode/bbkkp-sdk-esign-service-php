@@ -1,20 +1,19 @@
 # OpenAPI\Client\EsignApi
 
-All URIs are relative to http://localhost:10020, except if the operation defines another base path.
+All URIs are relative to *http://localhost:10020*
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**getUserNik()**](EsignApi.md#getUserNik) | **GET** /api/esign/nik/{nik} | Get user information |
-| [**signDocument()**](EsignApi.md#signDocument) | **POST** /api/esign/sign | Add signature to a document |
-| [**verifyDocumentByDoc()**](EsignApi.md#verifyDocumentByDoc) | **POST** /api/esign/verify/doc | Verify signature |
-| [**verifyDocumentById()**](EsignApi.md#verifyDocumentById) | **GET** /api/esign/verify/id | Verify signature |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getUserNik**](EsignApi.md#getUserNik) | **GET** /api/esign/nik/{nik} | Get user information
+[**signDocument**](EsignApi.md#signDocument) | **POST** /api/esign/sign | Add signature to a document
+[**verifyDocumentByDoc**](EsignApi.md#verifyDocumentByDoc) | **POST** /api/esign/verify/doc | Verify signature
+[**verifyDocumentById**](EsignApi.md#verifyDocumentById) | **GET** /api/esign/verify/id | Verify signature
 
 
-## `getUserNik()`
 
-```php
-getUserNik($nik): \OpenAPI\Client\Model\GetUserNik200Response
-```
+## getUserNik
+
+> \OpenAPI\Client\Model\InlineResponse200 getUserNik($nik)
 
 Get user information
 
@@ -47,17 +46,19 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EsignApi->getUserNik: ', $e->getMessage(), PHP_EOL;
 }
+?>
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **nik** | **string**| NIK, Nomor Induk Kepegawaian | |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nik** | **string**| NIK, Nomor Induk Kepegawaian |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetUserNik200Response**](../Model/GetUserNik200Response.md)
+[**\OpenAPI\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -66,17 +67,16 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
 [[Back to README]](../../README.md)
 
-## `signDocument()`
 
-```php
-signDocument($file, $nik, $passphrase, $ref_code, $file_name, $ref_metadata): \OpenAPI\Client\Model\SignResponse
-```
+## signDocument
+
+> \OpenAPI\Client\Model\SignResponse signDocument($file, $nik, $passphrase, $ref_code, $file_name, $ref_metadata)
 
 Add signature to a document
 
@@ -101,11 +101,11 @@ $apiInstance = new OpenAPI\Client\Api\EsignApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file = "/path/to/file.txt"; // \SplFileObject
-$nik = 'nik_example'; // string
-$passphrase = 'passphrase_example'; // string
+$file = "/path/to/file.txt"; // \SplFileObject | 
+$nik = 'nik_example'; // string | 
+$passphrase = 'passphrase_example'; // string | 
 $ref_code = 'ref_code_example'; // string | Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen
-$file_name = 'file_name_example'; // string
+$file_name = 'file_name_example'; // string | 
 $ref_metadata = 'ref_metadata_example'; // string | Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64
 
 try {
@@ -114,18 +114,20 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EsignApi->signDocument: ', $e->getMessage(), PHP_EOL;
 }
+?>
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **file** | **\SplFileObject****\SplFileObject**|  | |
-| **nik** | **string**|  | |
-| **passphrase** | **string**|  | |
-| **ref_code** | **string**| Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen | |
-| **file_name** | **string**|  | [optional] |
-| **ref_metadata** | **string**| Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64 | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **\SplFileObject****\SplFileObject**|  |
+ **nik** | **string**|  |
+ **passphrase** | **string**|  |
+ **ref_code** | **string**| Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen |
+ **file_name** | **string**|  | [optional]
+ **ref_metadata** | **string**| Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64 | [optional]
 
 ### Return type
 
@@ -137,18 +139,17 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: `multipart/form-data`
-- **Accept**: `application/json`
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
 [[Back to README]](../../README.md)
 
-## `verifyDocumentByDoc()`
 
-```php
-verifyDocumentByDoc($signed_file): \OpenAPI\Client\Model\EsignResult
-```
+## verifyDocumentByDoc
+
+> \OpenAPI\Client\Model\EsignResult verifyDocumentByDoc($signed_file)
 
 Verify signature
 
@@ -173,7 +174,7 @@ $apiInstance = new OpenAPI\Client\Api\EsignApi(
     new GuzzleHttp\Client(),
     $config
 );
-$signed_file = "/path/to/file.txt"; // \SplFileObject
+$signed_file = "/path/to/file.txt"; // \SplFileObject | 
 
 try {
     $result = $apiInstance->verifyDocumentByDoc($signed_file);
@@ -181,13 +182,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EsignApi->verifyDocumentByDoc: ', $e->getMessage(), PHP_EOL;
 }
+?>
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **signed_file** | **\SplFileObject****\SplFileObject**|  | |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **signed_file** | **\SplFileObject****\SplFileObject**|  |
 
 ### Return type
 
@@ -199,18 +202,17 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: `multipart/form-data`
-- **Accept**: `application/json`
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
 [[Back to README]](../../README.md)
 
-## `verifyDocumentById()`
 
-```php
-verifyDocumentById($id): \OpenAPI\Client\Model\EsignResult
-```
+## verifyDocumentById
+
+> \OpenAPI\Client\Model\EsignResult verifyDocumentById($id)
 
 Verify signature
 
@@ -243,13 +245,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EsignApi->verifyDocumentById: ', $e->getMessage(), PHP_EOL;
 }
+?>
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Esign ID / Reference Code | |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Esign ID / Reference Code |
 
 ### Return type
 
@@ -262,8 +266,9 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
 [[Back to README]](../../README.md)
+

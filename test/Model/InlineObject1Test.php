@@ -1,6 +1,6 @@
 <?php
 /**
- * SignResponseTest
+ * InlineObject1Test
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SignResponseTest Class Doc Comment
+ * InlineObject1Test Class Doc Comment
  *
  * @category    Class
- * @description SignResponse
+ * @description InlineObject1
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SignResponseTest extends TestCase
+class InlineObject1Test extends TestCase
 {
 
     /**
@@ -72,23 +72,16 @@ class SignResponseTest extends TestCase
     }
 
     /**
-     * Test "SignResponse"
+     * Test "InlineObject1"
      */
-    public function testSignResponse()
+    public function testInlineObject1()
     {
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "signed_file"
      */
-    public function testPropertyMessage()
-    {
-    }
-
-    /**
-     * Test attribute "results"
-     */
-    public function testPropertyResults()
+    public function testPropertySignedFile()
     {
     }
 }

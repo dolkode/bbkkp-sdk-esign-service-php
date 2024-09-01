@@ -1,6 +1,6 @@
 <?php
 /**
- * InfoTSA
+ * InlineObject1
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * InfoTSA Class Doc Comment
+ * InlineObject1 Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class InfoTSA implements ModelInterface, ArrayAccess
+class InlineObject1 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class InfoTSA implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'InfoTSA';
+    protected static $openAPIModelName = 'inline_object_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class InfoTSA implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'tsa_cert_validity' => 'string'
+        'signed_file' => '\SplFileObject'
     ];
 
     /**
@@ -67,8 +66,7 @@ class InfoTSA implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'name' => null,
-        'tsa_cert_validity' => null
+        'signed_file' => 'binary'
     ];
 
     /**
@@ -98,8 +96,7 @@ class InfoTSA implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'tsa_cert_validity' => 'tsa_cert_validity'
+        'signed_file' => 'signed_file'
     ];
 
     /**
@@ -108,8 +105,7 @@ class InfoTSA implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'tsa_cert_validity' => 'setTsaCertValidity'
+        'signed_file' => 'setSignedFile'
     ];
 
     /**
@@ -118,8 +114,7 @@ class InfoTSA implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'tsa_cert_validity' => 'getTsaCertValidity'
+        'signed_file' => 'getSignedFile'
     ];
 
     /**
@@ -182,8 +177,7 @@ class InfoTSA implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['tsa_cert_validity'] = isset($data['tsa_cert_validity']) ? $data['tsa_cert_validity'] : null;
+        $this->container['signed_file'] = isset($data['signed_file']) ? $data['signed_file'] : null;
     }
 
     /**
@@ -195,6 +189,9 @@ class InfoTSA implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['signed_file'] === null) {
+            $invalidProperties[] = "'signed_file' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -211,49 +208,25 @@ class InfoTSA implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets name
+     * Gets signed_file
      *
-     * @return string|null
+     * @return \SplFileObject
      */
-    public function getName()
+    public function getSignedFile()
     {
-        return $this->container['name'];
+        return $this->container['signed_file'];
     }
 
     /**
-     * Sets name
+     * Sets signed_file
      *
-     * @param string|null $name name
+     * @param \SplFileObject $signed_file signed_file
      *
      * @return $this
      */
-    public function setName($name)
+    public function setSignedFile($signed_file)
     {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets tsa_cert_validity
-     *
-     * @return string|null
-     */
-    public function getTsaCertValidity()
-    {
-        return $this->container['tsa_cert_validity'];
-    }
-
-    /**
-     * Sets tsa_cert_validity
-     *
-     * @param string|null $tsa_cert_validity tsa_cert_validity
-     *
-     * @return $this
-     */
-    public function setTsaCertValidity($tsa_cert_validity)
-    {
-        $this->container['tsa_cert_validity'] = $tsa_cert_validity;
+        $this->container['signed_file'] = $signed_file;
 
         return $this;
     }
