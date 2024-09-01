@@ -1,6 +1,6 @@
 <?php
 /**
- * EsignResult
+ * InlineObject1
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * EsignResult Class Doc Comment
+ * InlineObject1 Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class EsignResult implements ModelInterface, ArrayAccess
+class InlineObject1 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class EsignResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'EsignResult';
+    protected static $openAPIModelName = 'inline_object_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class EsignResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\EsignResultResults',
-        'message' => 'string'
+        'signed_file' => '\SplFileObject'
     ];
 
     /**
@@ -67,8 +66,7 @@ class EsignResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'results' => null,
-        'message' => null
+        'signed_file' => 'binary'
     ];
 
     /**
@@ -98,8 +96,7 @@ class EsignResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'results' => 'results',
-        'message' => 'message'
+        'signed_file' => 'signed_file'
     ];
 
     /**
@@ -108,8 +105,7 @@ class EsignResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'results' => 'setResults',
-        'message' => 'setMessage'
+        'signed_file' => 'setSignedFile'
     ];
 
     /**
@@ -118,8 +114,7 @@ class EsignResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'results' => 'getResults',
-        'message' => 'getMessage'
+        'signed_file' => 'getSignedFile'
     ];
 
     /**
@@ -182,8 +177,7 @@ class EsignResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['signed_file'] = isset($data['signed_file']) ? $data['signed_file'] : null;
     }
 
     /**
@@ -195,6 +189,9 @@ class EsignResult implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['signed_file'] === null) {
+            $invalidProperties[] = "'signed_file' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -211,49 +208,25 @@ class EsignResult implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets results
+     * Gets signed_file
      *
-     * @return \OpenAPI\Client\Model\EsignResultResults|null
+     * @return \SplFileObject
      */
-    public function getResults()
+    public function getSignedFile()
     {
-        return $this->container['results'];
+        return $this->container['signed_file'];
     }
 
     /**
-     * Sets results
+     * Sets signed_file
      *
-     * @param \OpenAPI\Client\Model\EsignResultResults|null $results results
+     * @param \SplFileObject $signed_file signed_file
      *
      * @return $this
      */
-    public function setResults($results)
+    public function setSignedFile($signed_file)
     {
-        $this->container['results'] = $results;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return string|null
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string|null $message message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
+        $this->container['signed_file'] = $signed_file;
 
         return $this;
     }

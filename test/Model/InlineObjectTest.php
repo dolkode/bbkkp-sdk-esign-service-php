@@ -1,6 +1,6 @@
 <?php
 /**
- * SignatureDocumentTest
+ * InlineObjectTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace OpenAPI\Client;
 
 /**
- * SignatureDocumentTest Class Doc Comment
+ * InlineObjectTest Class Doc Comment
  *
  * @category    Class
- * @description SignatureDocument
+ * @description InlineObject
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SignatureDocumentTest extends \PHPUnit_Framework_TestCase
+class InlineObjectTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,51 @@ class SignatureDocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SignatureDocument"
+     * Test "InlineObject"
      */
-    public function testSignatureDocument()
+    public function testInlineObject()
     {
     }
 
     /**
-     * Test attribute "signed_using_tsa"
+     * Test attribute "file"
      */
-    public function testPropertySignedUsingTsa()
+    public function testPropertyFile()
     {
     }
 
     /**
-     * Test attribute "reason"
+     * Test attribute "file_name"
      */
-    public function testPropertyReason()
+    public function testPropertyFileName()
     {
     }
 
     /**
-     * Test attribute "document_integrity"
+     * Test attribute "nik"
      */
-    public function testPropertyDocumentIntegrity()
+    public function testPropertyNik()
     {
     }
 
     /**
-     * Test attribute "signature_value"
+     * Test attribute "passphrase"
      */
-    public function testPropertySignatureValue()
+    public function testPropertyPassphrase()
     {
     }
 
     /**
-     * Test attribute "signed_in"
+     * Test attribute "ref_code"
      */
-    public function testPropertySignedIn()
+    public function testPropertyRefCode()
     {
     }
 
     /**
-     * Test attribute "location"
+     * Test attribute "ref_metadata"
      */
-    public function testPropertyLocation()
-    {
-    }
-
-    /**
-     * Test attribute "hash_value"
-     */
-    public function testPropertyHashValue()
+    public function testPropertyRefMetadata()
     {
     }
 }

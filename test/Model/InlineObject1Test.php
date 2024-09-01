@@ -1,6 +1,6 @@
 <?php
 /**
- * SignatureDocumentTest
+ * InlineObject1Test
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace OpenAPI\Client;
 
 /**
- * SignatureDocumentTest Class Doc Comment
+ * InlineObject1Test Class Doc Comment
  *
  * @category    Class
- * @description SignatureDocument
+ * @description InlineObject1
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SignatureDocumentTest extends \PHPUnit_Framework_TestCase
+class InlineObject1Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,16 @@ class SignatureDocumentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SignatureDocument"
+     * Test "InlineObject1"
      */
-    public function testSignatureDocument()
+    public function testInlineObject1()
     {
     }
 
     /**
-     * Test attribute "signed_using_tsa"
+     * Test attribute "signed_file"
      */
-    public function testPropertySignedUsingTsa()
-    {
-    }
-
-    /**
-     * Test attribute "reason"
-     */
-    public function testPropertyReason()
-    {
-    }
-
-    /**
-     * Test attribute "document_integrity"
-     */
-    public function testPropertyDocumentIntegrity()
-    {
-    }
-
-    /**
-     * Test attribute "signature_value"
-     */
-    public function testPropertySignatureValue()
-    {
-    }
-
-    /**
-     * Test attribute "signed_in"
-     */
-    public function testPropertySignedIn()
-    {
-    }
-
-    /**
-     * Test attribute "location"
-     */
-    public function testPropertyLocation()
-    {
-    }
-
-    /**
-     * Test attribute "hash_value"
-     */
-    public function testPropertyHashValue()
+    public function testPropertySignedFile()
     {
     }
 }

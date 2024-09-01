@@ -1,6 +1,6 @@
 <?php
 /**
- * EsignResult
+ * InlineObject
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * EsignResult Class Doc Comment
+ * InlineObject Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class EsignResult implements ModelInterface, ArrayAccess
+class InlineObject implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class EsignResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'EsignResult';
+    protected static $openAPIModelName = 'inline_object';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,12 @@ class EsignResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\EsignResultResults',
-        'message' => 'string'
+        'file' => '\SplFileObject',
+        'file_name' => 'string',
+        'nik' => 'string',
+        'passphrase' => 'string',
+        'ref_code' => 'string',
+        'ref_metadata' => 'string'
     ];
 
     /**
@@ -67,8 +71,12 @@ class EsignResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'results' => null,
-        'message' => null
+        'file' => 'binary',
+        'file_name' => null,
+        'nik' => null,
+        'passphrase' => null,
+        'ref_code' => null,
+        'ref_metadata' => null
     ];
 
     /**
@@ -98,8 +106,12 @@ class EsignResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'results' => 'results',
-        'message' => 'message'
+        'file' => 'file',
+        'file_name' => 'file_name',
+        'nik' => 'nik',
+        'passphrase' => 'passphrase',
+        'ref_code' => 'ref_code',
+        'ref_metadata' => 'ref_metadata'
     ];
 
     /**
@@ -108,8 +120,12 @@ class EsignResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'results' => 'setResults',
-        'message' => 'setMessage'
+        'file' => 'setFile',
+        'file_name' => 'setFileName',
+        'nik' => 'setNik',
+        'passphrase' => 'setPassphrase',
+        'ref_code' => 'setRefCode',
+        'ref_metadata' => 'setRefMetadata'
     ];
 
     /**
@@ -118,8 +134,12 @@ class EsignResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'results' => 'getResults',
-        'message' => 'getMessage'
+        'file' => 'getFile',
+        'file_name' => 'getFileName',
+        'nik' => 'getNik',
+        'passphrase' => 'getPassphrase',
+        'ref_code' => 'getRefCode',
+        'ref_metadata' => 'getRefMetadata'
     ];
 
     /**
@@ -182,8 +202,12 @@ class EsignResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['file'] = isset($data['file']) ? $data['file'] : null;
+        $this->container['file_name'] = isset($data['file_name']) ? $data['file_name'] : null;
+        $this->container['nik'] = isset($data['nik']) ? $data['nik'] : null;
+        $this->container['passphrase'] = isset($data['passphrase']) ? $data['passphrase'] : null;
+        $this->container['ref_code'] = isset($data['ref_code']) ? $data['ref_code'] : null;
+        $this->container['ref_metadata'] = isset($data['ref_metadata']) ? $data['ref_metadata'] : null;
     }
 
     /**
@@ -195,6 +219,18 @@ class EsignResult implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['file'] === null) {
+            $invalidProperties[] = "'file' can't be null";
+        }
+        if ($this->container['nik'] === null) {
+            $invalidProperties[] = "'nik' can't be null";
+        }
+        if ($this->container['passphrase'] === null) {
+            $invalidProperties[] = "'passphrase' can't be null";
+        }
+        if ($this->container['ref_code'] === null) {
+            $invalidProperties[] = "'ref_code' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -211,49 +247,145 @@ class EsignResult implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets results
+     * Gets file
      *
-     * @return \OpenAPI\Client\Model\EsignResultResults|null
+     * @return \SplFileObject
      */
-    public function getResults()
+    public function getFile()
     {
-        return $this->container['results'];
+        return $this->container['file'];
     }
 
     /**
-     * Sets results
+     * Sets file
      *
-     * @param \OpenAPI\Client\Model\EsignResultResults|null $results results
+     * @param \SplFileObject $file file
      *
      * @return $this
      */
-    public function setResults($results)
+    public function setFile($file)
     {
-        $this->container['results'] = $results;
+        $this->container['file'] = $file;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets file_name
      *
      * @return string|null
      */
-    public function getMessage()
+    public function getFileName()
     {
-        return $this->container['message'];
+        return $this->container['file_name'];
     }
 
     /**
-     * Sets message
+     * Sets file_name
      *
-     * @param string|null $message message
+     * @param string|null $file_name file_name
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setFileName($file_name)
     {
-        $this->container['message'] = $message;
+        $this->container['file_name'] = $file_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets nik
+     *
+     * @return string
+     */
+    public function getNik()
+    {
+        return $this->container['nik'];
+    }
+
+    /**
+     * Sets nik
+     *
+     * @param string $nik nik
+     *
+     * @return $this
+     */
+    public function setNik($nik)
+    {
+        $this->container['nik'] = $nik;
+
+        return $this;
+    }
+
+    /**
+     * Gets passphrase
+     *
+     * @return string
+     */
+    public function getPassphrase()
+    {
+        return $this->container['passphrase'];
+    }
+
+    /**
+     * Sets passphrase
+     *
+     * @param string $passphrase passphrase
+     *
+     * @return $this
+     */
+    public function setPassphrase($passphrase)
+    {
+        $this->container['passphrase'] = $passphrase;
+
+        return $this;
+    }
+
+    /**
+     * Gets ref_code
+     *
+     * @return string
+     */
+    public function getRefCode()
+    {
+        return $this->container['ref_code'];
+    }
+
+    /**
+     * Sets ref_code
+     *
+     * @param string $ref_code Reference code adalah nomor unik disetiap layanan untuk verifikasi dokumen
+     *
+     * @return $this
+     */
+    public function setRefCode($ref_code)
+    {
+        $this->container['ref_code'] = $ref_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets ref_metadata
+     *
+     * @return string|null
+     */
+    public function getRefMetadata()
+    {
+        return $this->container['ref_metadata'];
+    }
+
+    /**
+     * Sets ref_metadata
+     *
+     * @param string|null $ref_metadata Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64
+     *
+     * @return $this
+     */
+    public function setRefMetadata($ref_metadata)
+    {
+        $this->container['ref_metadata'] = $ref_metadata;
 
         return $this;
     }
