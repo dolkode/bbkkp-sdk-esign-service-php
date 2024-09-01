@@ -1,6 +1,6 @@
 <?php
 /**
- * SignResponse
+ * EsignResultResults
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * SignResponse Class Doc Comment
+ * EsignResultResults Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class EsignResultResults implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SignResponse';
+    protected static $openAPIModelName = 'EsignResult_results';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,13 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'message' => 'string',
-        'results' => '\OpenAPI\Client\Model\SignResponseResults'
+        'id' => 'string',
+        'layanan' => 'string',
+        'ref_code' => 'string',
+        'file_name' => 'string',
+        'file_link' => 'string',
+        'date_signed' => 'string',
+        'esign_details' => '\OpenAPI\Client\Model\EsignDetails'
     ];
 
     /**
@@ -69,8 +74,13 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'message' => null,
-        'results' => null
+        'id' => null,
+        'layanan' => null,
+        'ref_code' => null,
+        'file_name' => null,
+        'file_link' => null,
+        'date_signed' => null,
+        'esign_details' => null
     ];
 
     /**
@@ -79,8 +89,13 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'message' => false,
-        'results' => false
+        'id' => false,
+        'layanan' => false,
+        'ref_code' => false,
+        'file_name' => false,
+        'file_link' => false,
+        'date_signed' => false,
+        'esign_details' => false
     ];
 
     /**
@@ -169,8 +184,13 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message',
-        'results' => 'results'
+        'id' => 'id',
+        'layanan' => 'layanan',
+        'ref_code' => 'ref_code',
+        'file_name' => 'file_name',
+        'file_link' => 'file_link',
+        'date_signed' => 'date_signed',
+        'esign_details' => 'esign_details'
     ];
 
     /**
@@ -179,8 +199,13 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage',
-        'results' => 'setResults'
+        'id' => 'setId',
+        'layanan' => 'setLayanan',
+        'ref_code' => 'setRefCode',
+        'file_name' => 'setFileName',
+        'file_link' => 'setFileLink',
+        'date_signed' => 'setDateSigned',
+        'esign_details' => 'setEsignDetails'
     ];
 
     /**
@@ -189,8 +214,13 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage',
-        'results' => 'getResults'
+        'id' => 'getId',
+        'layanan' => 'getLayanan',
+        'ref_code' => 'getRefCode',
+        'file_name' => 'getFileName',
+        'file_link' => 'getFileLink',
+        'date_signed' => 'getDateSigned',
+        'esign_details' => 'getEsignDetails'
     ];
 
     /**
@@ -250,8 +280,13 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('message', $data ?? [], null);
-        $this->setIfExists('results', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('layanan', $data ?? [], null);
+        $this->setIfExists('ref_code', $data ?? [], null);
+        $this->setIfExists('file_name', $data ?? [], null);
+        $this->setIfExists('file_link', $data ?? [], null);
+        $this->setIfExists('date_signed', $data ?? [], null);
+        $this->setIfExists('esign_details', $data ?? [], null);
     }
 
     /**
@@ -297,55 +332,190 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets message
+     * Gets id
      *
      * @return string|null
      */
-    public function getMessage()
+    public function getId()
     {
-        return $this->container['message'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets message
+     * Sets id
      *
-     * @param string|null $message message
+     * @param string|null $id id
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setId($id)
     {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['message'] = $message;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets results
+     * Gets layanan
      *
-     * @return \OpenAPI\Client\Model\SignResponseResults|null
+     * @return string|null
      */
-    public function getResults()
+    public function getLayanan()
     {
-        return $this->container['results'];
+        return $this->container['layanan'];
     }
 
     /**
-     * Sets results
+     * Sets layanan
      *
-     * @param \OpenAPI\Client\Model\SignResponseResults|null $results results
+     * @param string|null $layanan layanan
      *
      * @return self
      */
-    public function setResults($results)
+    public function setLayanan($layanan)
     {
-        if (is_null($results)) {
-            throw new \InvalidArgumentException('non-nullable results cannot be null');
+        if (is_null($layanan)) {
+            throw new \InvalidArgumentException('non-nullable layanan cannot be null');
         }
-        $this->container['results'] = $results;
+        $this->container['layanan'] = $layanan;
+
+        return $this;
+    }
+
+    /**
+     * Gets ref_code
+     *
+     * @return string|null
+     */
+    public function getRefCode()
+    {
+        return $this->container['ref_code'];
+    }
+
+    /**
+     * Sets ref_code
+     *
+     * @param string|null $ref_code ref_code
+     *
+     * @return self
+     */
+    public function setRefCode($ref_code)
+    {
+        if (is_null($ref_code)) {
+            throw new \InvalidArgumentException('non-nullable ref_code cannot be null');
+        }
+        $this->container['ref_code'] = $ref_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets file_name
+     *
+     * @return string|null
+     */
+    public function getFileName()
+    {
+        return $this->container['file_name'];
+    }
+
+    /**
+     * Sets file_name
+     *
+     * @param string|null $file_name file_name
+     *
+     * @return self
+     */
+    public function setFileName($file_name)
+    {
+        if (is_null($file_name)) {
+            throw new \InvalidArgumentException('non-nullable file_name cannot be null');
+        }
+        $this->container['file_name'] = $file_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets file_link
+     *
+     * @return string|null
+     */
+    public function getFileLink()
+    {
+        return $this->container['file_link'];
+    }
+
+    /**
+     * Sets file_link
+     *
+     * @param string|null $file_link file_link
+     *
+     * @return self
+     */
+    public function setFileLink($file_link)
+    {
+        if (is_null($file_link)) {
+            throw new \InvalidArgumentException('non-nullable file_link cannot be null');
+        }
+        $this->container['file_link'] = $file_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_signed
+     *
+     * @return string|null
+     */
+    public function getDateSigned()
+    {
+        return $this->container['date_signed'];
+    }
+
+    /**
+     * Sets date_signed
+     *
+     * @param string|null $date_signed date_signed
+     *
+     * @return self
+     */
+    public function setDateSigned($date_signed)
+    {
+        if (is_null($date_signed)) {
+            throw new \InvalidArgumentException('non-nullable date_signed cannot be null');
+        }
+        $this->container['date_signed'] = $date_signed;
+
+        return $this;
+    }
+
+    /**
+     * Gets esign_details
+     *
+     * @return \OpenAPI\Client\Model\EsignDetails|null
+     */
+    public function getEsignDetails()
+    {
+        return $this->container['esign_details'];
+    }
+
+    /**
+     * Sets esign_details
+     *
+     * @param \OpenAPI\Client\Model\EsignDetails|null $esign_details esign_details
+     *
+     * @return self
+     */
+    public function setEsignDetails($esign_details)
+    {
+        if (is_null($esign_details)) {
+            throw new \InvalidArgumentException('non-nullable esign_details cannot be null');
+        }
+        $this->container['esign_details'] = $esign_details;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * SignResponse
+ * ApiEsignVerifyDocPost200Response
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * SignResponse Class Doc Comment
+ * ApiEsignVerifyDocPost200Response Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ApiEsignVerifyDocPost200Response implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SignResponse';
+    protected static $openAPIModelName = '_api_esign_verify_doc_post_200_response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'message' => 'string',
-        'results' => '\OpenAPI\Client\Model\SignResponseResults'
+        'results' => '\OpenAPI\Client\Model\EsignDetails',
+        'message' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'message' => null,
-        'results' => null
+        'results' => null,
+        'message' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'message' => false,
-        'results' => false
+        'results' => false,
+        'message' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message',
-        'results' => 'results'
+        'results' => 'results',
+        'message' => 'message'
     ];
 
     /**
@@ -179,8 +179,8 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage',
-        'results' => 'setResults'
+        'results' => 'setResults',
+        'message' => 'setMessage'
     ];
 
     /**
@@ -189,8 +189,8 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage',
-        'results' => 'getResults'
+        'results' => 'getResults',
+        'message' => 'getMessage'
     ];
 
     /**
@@ -250,8 +250,8 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('message', $data ?? [], null);
         $this->setIfExists('results', $data ?? [], null);
+        $this->setIfExists('message', $data ?? [], null);
     }
 
     /**
@@ -297,6 +297,33 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
+     * Gets results
+     *
+     * @return \OpenAPI\Client\Model\EsignDetails|null
+     */
+    public function getResults()
+    {
+        return $this->container['results'];
+    }
+
+    /**
+     * Sets results
+     *
+     * @param \OpenAPI\Client\Model\EsignDetails|null $results results
+     *
+     * @return self
+     */
+    public function setResults($results)
+    {
+        if (is_null($results)) {
+            throw new \InvalidArgumentException('non-nullable results cannot be null');
+        }
+        $this->container['results'] = $results;
+
+        return $this;
+    }
+
+    /**
      * Gets message
      *
      * @return string|null
@@ -319,33 +346,6 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable message cannot be null');
         }
         $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets results
-     *
-     * @return \OpenAPI\Client\Model\SignResponseResults|null
-     */
-    public function getResults()
-    {
-        return $this->container['results'];
-    }
-
-    /**
-     * Sets results
-     *
-     * @param \OpenAPI\Client\Model\SignResponseResults|null $results results
-     *
-     * @return self
-     */
-    public function setResults($results)
-    {
-        if (is_null($results)) {
-            throw new \InvalidArgumentException('non-nullable results cannot be null');
-        }
-        $this->container['results'] = $results;
 
         return $this;
     }

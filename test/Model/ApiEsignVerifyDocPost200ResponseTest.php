@@ -1,6 +1,6 @@
 <?php
 /**
- * ApiEsignNikNikGet200ResponseTest
+ * ApiEsignVerifyDocPost200ResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ApiEsignNikNikGet200ResponseTest Class Doc Comment
+ * ApiEsignVerifyDocPost200ResponseTest Class Doc Comment
  *
  * @category    Class
- * @description ApiEsignNikNikGet200Response
+ * @description ApiEsignVerifyDocPost200Response
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ApiEsignNikNikGet200ResponseTest extends TestCase
+class ApiEsignVerifyDocPost200ResponseTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ApiEsignNikNikGet200ResponseTest extends TestCase
     }
 
     /**
-     * Test "ApiEsignNikNikGet200Response"
+     * Test "ApiEsignVerifyDocPost200Response"
      */
-    public function testApiEsignNikNikGet200Response()
+    public function testApiEsignVerifyDocPost200Response()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

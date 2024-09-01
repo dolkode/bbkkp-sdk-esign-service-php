@@ -1,6 +1,6 @@
 <?php
 /**
- * ApiEsignNikNikGet200ResponseTest
+ * EsignResultResultsTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ApiEsignNikNikGet200ResponseTest Class Doc Comment
+ * EsignResultResultsTest Class Doc Comment
  *
  * @category    Class
- * @description ApiEsignNikNikGet200Response
+ * @description EsignResultResults
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ApiEsignNikNikGet200ResponseTest extends TestCase
+class EsignResultResultsTest extends TestCase
 {
 
     /**
@@ -71,27 +71,72 @@ class ApiEsignNikNikGet200ResponseTest extends TestCase
     }
 
     /**
-     * Test "ApiEsignNikNikGet200Response"
+     * Test "EsignResultResults"
      */
-    public function testApiEsignNikNikGet200Response()
+    public function testEsignResultResults()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "results"
+     * Test attribute "id"
      */
-    public function testPropertyResults()
+    public function testPropertyId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "layanan"
      */
-    public function testPropertyMessage()
+    public function testPropertyLayanan()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ref_code"
+     */
+    public function testPropertyRefCode()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "file_name"
+     */
+    public function testPropertyFileName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "file_link"
+     */
+    public function testPropertyFileLink()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "date_signed"
+     */
+    public function testPropertyDateSigned()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "esign_details"
+     */
+    public function testPropertyEsignDetails()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
