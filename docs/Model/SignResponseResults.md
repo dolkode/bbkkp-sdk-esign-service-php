@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** |  | [optional]
 **layanan** | **string** |  | [optional]
 **ref_code** | **string** |  | [optional]
+**ref_metadata** | **string** |  | [optional]
 **file_name** | **string** |  | [optional]
 **file_link** | **string** |  | [optional]
 
