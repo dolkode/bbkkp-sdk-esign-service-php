@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace BBSPJIKKP\Sdk\Esign\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \BBSPJIKKP\Sdk\Esign\ObjectSerializer;
 
 /**
  * EsignResult Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class EsignResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\EsignResultResults',
+        'results' => '\BBSPJIKKP\Sdk\Esign\Model\EsignResultResults',
         'message' => 'string'
     ];
 
@@ -299,7 +299,7 @@ class EsignResult implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\EsignResultResults|null
+     * @return \BBSPJIKKP\Sdk\Esign\Model\EsignResultResults|null
      */
     public function getResults()
     {
@@ -309,7 +309,7 @@ class EsignResult implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\EsignResultResults|null $results results
+     * @param \BBSPJIKKP\Sdk\Esign\Model\EsignResultResults|null $results results
      *
      * @return self
      */

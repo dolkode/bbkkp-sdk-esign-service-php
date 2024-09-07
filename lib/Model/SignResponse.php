@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace BBSPJIKKP\Sdk\Esign\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \BBSPJIKKP\Sdk\Esign\ObjectSerializer;
 
 /**
  * SignResponse Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'results' => '\OpenAPI\Client\Model\SignResponseResults'
+        'results' => '\BBSPJIKKP\Sdk\Esign\Model\SignResponseResults'
     ];
 
     /**
@@ -326,7 +326,7 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\SignResponseResults|null
+     * @return \BBSPJIKKP\Sdk\Esign\Model\SignResponseResults|null
      */
     public function getResults()
     {
@@ -336,7 +336,7 @@ class SignResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\SignResponseResults|null $results results
+     * @param \BBSPJIKKP\Sdk\Esign\Model\SignResponseResults|null $results results
      *
      * @return self
      */

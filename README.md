@@ -1,4 +1,4 @@
-# sdk-esign-service
+# SdkEsignService
 
 This API is used for sending whatsapp via API
 
@@ -36,7 +36,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/sdk-esign-service/vendor/autoload.php');
+require_once('/path/to/SdkEsignService/vendor/autoload.php');
 ```
 
 ## Getting Started
@@ -50,12 +50,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EsignApi(
+$apiInstance = new BBSPJIKKP\Sdk\Esign\Api\EsignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
