@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace BBSPJIKKP\Sdk\Esign\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \BBSPJIKKP\Sdk\Esign\ObjectSerializer;
 
 /**
  * EsignDetails Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,7 +60,7 @@ class EsignDetails implements ModelInterface, ArrayAccess
         'nama_dokumen' => 'string',
         'jumlah_signature' => 'int',
         'notes' => 'string',
-        'details' => '\OpenAPI\Client\Model\SignatureDetail[]',
+        'details' => '\BBSPJIKKP\Sdk\Esign\Model\SignatureDetail[]',
         'summary' => 'string'
     ];
 
@@ -303,7 +303,7 @@ class EsignDetails implements ModelInterface, ArrayAccess
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\SignatureDetail[]|null
+     * @return \BBSPJIKKP\Sdk\Esign\Model\SignatureDetail[]|null
      */
     public function getDetails()
     {
@@ -313,7 +313,7 @@ class EsignDetails implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\SignatureDetail[]|null $details details
+     * @param \BBSPJIKKP\Sdk\Esign\Model\SignatureDetail[]|null $details details
      *
      * @return $this
      */

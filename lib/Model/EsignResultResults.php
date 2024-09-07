@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace BBSPJIKKP\Sdk\Esign\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \BBSPJIKKP\Sdk\Esign\ObjectSerializer;
 
 /**
  * EsignResultResults Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -64,7 +64,7 @@ class EsignResultResults implements ModelInterface, ArrayAccess
         'file_name' => 'string',
         'file_link' => 'string',
         'date_signed' => 'string',
-        'esign_details' => '\OpenAPI\Client\Model\EsignDetails'
+        'esign_details' => '\BBSPJIKKP\Sdk\Esign\Model\EsignDetails'
     ];
 
     /**
@@ -417,7 +417,7 @@ class EsignResultResults implements ModelInterface, ArrayAccess
     /**
      * Gets esign_details
      *
-     * @return \OpenAPI\Client\Model\EsignDetails|null
+     * @return \BBSPJIKKP\Sdk\Esign\Model\EsignDetails|null
      */
     public function getEsignDetails()
     {
@@ -427,7 +427,7 @@ class EsignResultResults implements ModelInterface, ArrayAccess
     /**
      * Sets esign_details
      *
-     * @param \OpenAPI\Client\Model\EsignDetails|null $esign_details esign_details
+     * @param \BBSPJIKKP\Sdk\Esign\Model\EsignDetails|null $esign_details esign_details
      *
      * @return $this
      */

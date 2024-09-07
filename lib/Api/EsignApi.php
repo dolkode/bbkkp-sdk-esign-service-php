@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace BBSPJIKKP\Sdk\Esign\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use BBSPJIKKP\Sdk\Esign\ApiException;
+use BBSPJIKKP\Sdk\Esign\Configuration;
+use BBSPJIKKP\Sdk\Esign\HeaderSelector;
+use BBSPJIKKP\Sdk\Esign\ObjectSerializer;
 
 /**
  * EsignApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class EsignApi
      *
      * @param  string $nik NIK, Nomor Induk Kepegawaian (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InlineResponse200
+     * @return \BBSPJIKKP\Sdk\Esign\Model\InlineResponse200
      */
     public function getUserNik($nik)
     {
@@ -139,9 +139,9 @@ class EsignApi
      *
      * @param  string $nik NIK, Nomor Induk Kepegawaian (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BBSPJIKKP\Sdk\Esign\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserNikWithHttpInfo($nik)
     {
@@ -178,20 +178,20 @@ class EsignApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InlineResponse200' === '\SplFileObject') {
+                    if ('\BBSPJIKKP\Sdk\Esign\Model\InlineResponse200' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InlineResponse200', []),
+                        ObjectSerializer::deserialize($content, '\BBSPJIKKP\Sdk\Esign\Model\InlineResponse200', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InlineResponse200';
+            $returnType = '\BBSPJIKKP\Sdk\Esign\Model\InlineResponse200';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -210,7 +210,7 @@ class EsignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InlineResponse200',
+                        '\BBSPJIKKP\Sdk\Esign\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class EsignApi
      */
     public function getUserNikAsyncWithHttpInfo($nik)
     {
-        $returnType = '\OpenAPI\Client\Model\InlineResponse200';
+        $returnType = '\BBSPJIKKP\Sdk\Esign\Model\InlineResponse200';
         $request = $this->getUserNikRequest($nik);
 
         return $this->client
@@ -404,9 +404,9 @@ class EsignApi
      * @param  string $file_name file_name (optional)
      * @param  string $ref_metadata Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SignResponse
+     * @return \BBSPJIKKP\Sdk\Esign\Model\SignResponse
      */
     public function signDocument($file, $nik, $passphrase, $ref_code, $file_name = null, $ref_metadata = null)
     {
@@ -426,9 +426,9 @@ class EsignApi
      * @param  string $file_name (optional)
      * @param  string $ref_metadata Metadata tambahan untuk verifikasi dokumen dalam format JSON yang di encode base64 (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SignResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BBSPJIKKP\Sdk\Esign\Model\SignResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function signDocumentWithHttpInfo($file, $nik, $passphrase, $ref_code, $file_name = null, $ref_metadata = null)
     {
@@ -465,20 +465,20 @@ class EsignApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SignResponse' === '\SplFileObject') {
+                    if ('\BBSPJIKKP\Sdk\Esign\Model\SignResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SignResponse', []),
+                        ObjectSerializer::deserialize($content, '\BBSPJIKKP\Sdk\Esign\Model\SignResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SignResponse';
+            $returnType = '\BBSPJIKKP\Sdk\Esign\Model\SignResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -497,7 +497,7 @@ class EsignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SignResponse',
+                        '\BBSPJIKKP\Sdk\Esign\Model\SignResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -549,7 +549,7 @@ class EsignApi
      */
     public function signDocumentAsyncWithHttpInfo($file, $nik, $passphrase, $ref_code, $file_name = null, $ref_metadata = null)
     {
-        $returnType = '\OpenAPI\Client\Model\SignResponse';
+        $returnType = '\BBSPJIKKP\Sdk\Esign\Model\SignResponse';
         $request = $this->signDocumentRequest($file, $nik, $passphrase, $ref_code, $file_name, $ref_metadata);
 
         return $this->client
@@ -736,9 +736,9 @@ class EsignApi
      *
      * @param  \SplFileObject $signed_file signed_file (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EsignResult
+     * @return \BBSPJIKKP\Sdk\Esign\Model\EsignResult
      */
     public function verifyDocumentByDoc($signed_file)
     {
@@ -753,9 +753,9 @@ class EsignApi
      *
      * @param  \SplFileObject $signed_file (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EsignResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BBSPJIKKP\Sdk\Esign\Model\EsignResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function verifyDocumentByDocWithHttpInfo($signed_file)
     {
@@ -792,20 +792,20 @@ class EsignApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EsignResult' === '\SplFileObject') {
+                    if ('\BBSPJIKKP\Sdk\Esign\Model\EsignResult' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EsignResult', []),
+                        ObjectSerializer::deserialize($content, '\BBSPJIKKP\Sdk\Esign\Model\EsignResult', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EsignResult';
+            $returnType = '\BBSPJIKKP\Sdk\Esign\Model\EsignResult';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -824,7 +824,7 @@ class EsignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EsignResult',
+                        '\BBSPJIKKP\Sdk\Esign\Model\EsignResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -866,7 +866,7 @@ class EsignApi
      */
     public function verifyDocumentByDocAsyncWithHttpInfo($signed_file)
     {
-        $returnType = '\OpenAPI\Client\Model\EsignResult';
+        $returnType = '\BBSPJIKKP\Sdk\Esign\Model\EsignResult';
         $request = $this->verifyDocumentByDocRequest($signed_file);
 
         return $this->client
@@ -1010,9 +1010,9 @@ class EsignApi
      *
      * @param  string $id Esign ID / Reference Code (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EsignResult
+     * @return \BBSPJIKKP\Sdk\Esign\Model\EsignResult
      */
     public function verifyDocumentById($id)
     {
@@ -1027,9 +1027,9 @@ class EsignApi
      *
      * @param  string $id Esign ID / Reference Code (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \BBSPJIKKP\Sdk\Esign\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EsignResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BBSPJIKKP\Sdk\Esign\Model\EsignResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function verifyDocumentByIdWithHttpInfo($id)
     {
@@ -1066,20 +1066,20 @@ class EsignApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EsignResult' === '\SplFileObject') {
+                    if ('\BBSPJIKKP\Sdk\Esign\Model\EsignResult' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EsignResult', []),
+                        ObjectSerializer::deserialize($content, '\BBSPJIKKP\Sdk\Esign\Model\EsignResult', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EsignResult';
+            $returnType = '\BBSPJIKKP\Sdk\Esign\Model\EsignResult';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1098,7 +1098,7 @@ class EsignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EsignResult',
+                        '\BBSPJIKKP\Sdk\Esign\Model\EsignResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1140,7 +1140,7 @@ class EsignApi
      */
     public function verifyDocumentByIdAsyncWithHttpInfo($id)
     {
-        $returnType = '\OpenAPI\Client\Model\EsignResult';
+        $returnType = '\BBSPJIKKP\Sdk\Esign\Model\EsignResult';
         $request = $this->verifyDocumentByIdRequest($id);
 
         return $this->client

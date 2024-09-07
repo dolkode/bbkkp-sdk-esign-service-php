@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **file_name** | **string** |  | [optional] 
 **file_link** | **string** |  | [optional] 
 **date_signed** | **string** |  | [optional] 
-**esign_details** | [**\OpenAPI\Client\Model\EsignDetails**](EsignDetails.md) |  | [optional] 
+**esign_details** | [**\BBSPJIKKP\Sdk\Esign\Model\EsignDetails**](EsignDetails.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

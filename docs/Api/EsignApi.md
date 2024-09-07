@@ -1,4 +1,4 @@
-# OpenAPI\Client\EsignApi
+# BBSPJIKKP\Sdk\Esign\EsignApi
 
 All URIs are relative to *http://localhost:10020*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## getUserNik
 
-> \OpenAPI\Client\Model\InlineResponse200 getUserNik($nik)
+> \BBSPJIKKP\Sdk\Esign\Model\InlineResponse200 getUserNik($nik)
 
 Get user information
 
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EsignApi(
+$apiInstance = new BBSPJIKKP\Sdk\Esign\Api\EsignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\BBSPJIKKP\Sdk\Esign\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ## signDocument
 
-> \OpenAPI\Client\Model\SignResponse signDocument($file, $nik, $passphrase, $ref_code, $file_name, $ref_metadata)
+> \BBSPJIKKP\Sdk\Esign\Model\SignResponse signDocument($file, $nik, $passphrase, $ref_code, $file_name, $ref_metadata)
 
 Add signature to a document
 
@@ -90,12 +90,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EsignApi(
+$apiInstance = new BBSPJIKKP\Sdk\Esign\Api\EsignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SignResponse**](../Model/SignResponse.md)
+[**\BBSPJIKKP\Sdk\Esign\Model\SignResponse**](../Model/SignResponse.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ## verifyDocumentByDoc
 
-> \OpenAPI\Client\Model\EsignResult verifyDocumentByDoc($signed_file)
+> \BBSPJIKKP\Sdk\Esign\Model\EsignResult verifyDocumentByDoc($signed_file)
 
 Verify signature
 
@@ -163,12 +163,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EsignApi(
+$apiInstance = new BBSPJIKKP\Sdk\Esign\Api\EsignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EsignResult**](../Model/EsignResult.md)
+[**\BBSPJIKKP\Sdk\Esign\Model\EsignResult**](../Model/EsignResult.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ## verifyDocumentById
 
-> \OpenAPI\Client\Model\EsignResult verifyDocumentById($id)
+> \BBSPJIKKP\Sdk\Esign\Model\EsignResult verifyDocumentById($id)
 
 Verify signature
 
@@ -226,12 +226,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BBSPJIKKP\Sdk\Esign\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EsignApi(
+$apiInstance = new BBSPJIKKP\Sdk\Esign\Api\EsignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EsignResult**](../Model/EsignResult.md)
+[**\BBSPJIKKP\Sdk\Esign\Model\EsignResult**](../Model/EsignResult.md)
 
 ### Authorization
 

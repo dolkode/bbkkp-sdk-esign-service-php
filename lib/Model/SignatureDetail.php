@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace BBSPJIKKP\Sdk\Esign\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \BBSPJIKKP\Sdk\Esign\ObjectSerializer;
 
 /**
  * SignatureDetail Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  BBSPJIKKP\Sdk\Esign
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,10 +57,10 @@ class SignatureDetail implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'info_tsa' => '\OpenAPI\Client\Model\InfoTSA',
+        'info_tsa' => '\BBSPJIKKP\Sdk\Esign\Model\InfoTSA',
         'signature_field' => 'string',
-        'info_signer' => '\OpenAPI\Client\Model\InfoSigner',
-        'signature_document' => '\OpenAPI\Client\Model\SignatureDocument'
+        'info_signer' => '\BBSPJIKKP\Sdk\Esign\Model\InfoSigner',
+        'signature_document' => '\BBSPJIKKP\Sdk\Esign\Model\SignatureDocument'
     ];
 
     /**
@@ -225,7 +225,7 @@ class SignatureDetail implements ModelInterface, ArrayAccess
     /**
      * Gets info_tsa
      *
-     * @return \OpenAPI\Client\Model\InfoTSA|null
+     * @return \BBSPJIKKP\Sdk\Esign\Model\InfoTSA|null
      */
     public function getInfoTsa()
     {
@@ -235,7 +235,7 @@ class SignatureDetail implements ModelInterface, ArrayAccess
     /**
      * Sets info_tsa
      *
-     * @param \OpenAPI\Client\Model\InfoTSA|null $info_tsa info_tsa
+     * @param \BBSPJIKKP\Sdk\Esign\Model\InfoTSA|null $info_tsa info_tsa
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class SignatureDetail implements ModelInterface, ArrayAccess
     /**
      * Gets info_signer
      *
-     * @return \OpenAPI\Client\Model\InfoSigner|null
+     * @return \BBSPJIKKP\Sdk\Esign\Model\InfoSigner|null
      */
     public function getInfoSigner()
     {
@@ -283,7 +283,7 @@ class SignatureDetail implements ModelInterface, ArrayAccess
     /**
      * Sets info_signer
      *
-     * @param \OpenAPI\Client\Model\InfoSigner|null $info_signer info_signer
+     * @param \BBSPJIKKP\Sdk\Esign\Model\InfoSigner|null $info_signer info_signer
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class SignatureDetail implements ModelInterface, ArrayAccess
     /**
      * Gets signature_document
      *
-     * @return \OpenAPI\Client\Model\SignatureDocument|null
+     * @return \BBSPJIKKP\Sdk\Esign\Model\SignatureDocument|null
      */
     public function getSignatureDocument()
     {
@@ -307,7 +307,7 @@ class SignatureDetail implements ModelInterface, ArrayAccess
     /**
      * Sets signature_document
      *
-     * @param \OpenAPI\Client\Model\SignatureDocument|null $signature_document signature_document
+     * @param \BBSPJIKKP\Sdk\Esign\Model\SignatureDocument|null $signature_document signature_document
      *
      * @return $this
      */
