@@ -1,4 +1,4 @@
-# sdk-esign-service
+# OpenAPIClient-php
 
 This API is used for sending whatsapp via API
 
@@ -38,7 +38,7 @@ Then run `composer install`
 Download the files and include `autoload.php`:
 
 ```php
-    require_once('/path/to/sdk-esign-service/vendor/autoload.php');
+    require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
 ```
 
 ## Tests
